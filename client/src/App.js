@@ -1,4 +1,4 @@
-import React, { Fragment, } from 'react';
+import React, { } from 'react';
 import Home from './components/Home';
 import NoMatch from './components/NoMatch';
 import Navbar from './components/Navbar';
@@ -8,6 +8,7 @@ import { Switch, Route, } from 'react-router-dom';
 import { Container, } from "semantic-ui-react";
 import FetchUser from './components/FetchUser';
 import ProtectedRoute from './components/ProtectedRoute';
+import MyLikes from './components/MyLikes';
 
 const App = () => (
   <div>
@@ -18,6 +19,7 @@ const App = () => (
           <ProtectedRoute exact path="/" component={Home} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/register" component={Register} />
+          <Route exact path="/mylikes" component={MyLikes} />
           <Route component={NoMatch} />
         </Switch>
       </Container>
